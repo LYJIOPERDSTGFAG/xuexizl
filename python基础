@@ -1,0 +1,148 @@
+# Python复习
+
+（IPO：Input输出    Process处理    Output输出）
+python是一门面向对象的解释型高级语音
+python2.x与python3.x不兼容
+
+## python语言的特点：
+
+语法简单
+可以跨平台
+粘性扩展（可以将c和c++以及其它语言整合）
+开源，灵活，可以读，支持中文，模式多样（支持面向对象和面向过程）
+类库丰富
+
+## python中的输入和输出
+
+### 输出函数
+
+print()函数是python的输出函数
+
+##### 内置函数
+
+###### chr()   返回值是当前整数对应的 ASCII 字符。
+
+```
+print(chr(97))
+```
+
+![image-20230117140703024](C:\Users\24682574\AppData\Roaming\Typora\typora-user-images\image-20230117140703024.png)
+
+###### ord()  返回值是对应的十进制整数。
+
+```
+print(ord("占"),ord("杨"))
+print(ord('a'))
+```
+
+运行结果：
+
+![image-20230117140557741](C:\Users\24682574\AppData\Roaming\Typora\typora-user-images\image-20230117140557741.png)            
+
+###### \u加16进制可以得到需要的中文
+
+将上面的“占”运行的十进制结果转化为十六进制为5360
+
+```
+print("\u5360")
+```
+
+**在python中可以用  ， 来链接两个字符串和数字****
+
+##### print函数的语法结构：
+
+`print`(**objects*,*sep=' '*,*end='\n'*,*file=None*,*flush=False*)
+
+*objects表示可以输出多个对象
+
+sep用来指定用什么来分割，默认为空格
+
+```
+print(1,2,3,4,5)
+print(1,2,3,4,5,sep=".")
+```
+
+![image-20230117142043867](C:\Users\24682574\AppData\Roaming\Typora\typora-user-images\image-20230117142043867.png)
+
+end用来指定用什么来结尾，默认为（\n即换行）
+
+```
+print(1,2,3,4,5,end="  ")
+print(1,2,3,4,5,sep=".")
+```
+
+![image-20230117142214808](C:\Users\24682574\AppData\Roaming\Typora\typora-user-images\image-20230117142214808.png)
+
+注意:使用"+"链接数值和其他数据类型时，系统默认为加法计算，程序会报错
+
+```
+print(1+"qe")
+```
+
+会报类型错误如下：
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+### 输入函数
+
+input()函数是python的输入函数
+
+语法格式：
+
+变量名=input("提示文字")
+
+注意：无论用户输入的是数字或者字符，input函数统一按照**字符串类型**
+
+#### 变量命名规则
+
+在 Python 中给一个变量命名时，需要遵循以下两个规则：
+
+- 变量名由英文字母、下划线`_`或数字组成，并且第一个字符必须是英文字母或下划线。
+- 变量名不能是 Python 关键字（又称关键词）。
+
+#### type()函数
+
+作用：用来查看变量的类型
+
+```
+i=1
+print(type(i))
+```
+
+![image-20230117164445560](C:\Users\24682574\AppData\Roaming\Typora\typora-user-images\image-20230117164445560.png)
+
+#### int()函数
+
+作用：是将字符串或者数字变成整形。
+
+如果想输入可以用int()函数强行转化
+
+```
+mun=input("输入一个数:")
+print(type(mun))
+```
+
+![image-20230117164848097](C:\Users\24682574\AppData\Roaming\Typora\typora-user-images\image-20230117164848097.png)
+
+```
+mun=int(input("输入一个数:"))
+print(type(mun))
+```
+
+![image-20230117164934388](C:\Users\24682574\AppData\Roaming\Typora\typora-user-images\image-20230117164934388.png)
+
+## python的语法要求
+
+#### pyhton的注释
+
+单行注释：#注释内容
+
+多行注释："""注释内容""" 
+
+中文声明注释:第一加#coding:utf-8
+
+#### python的代码缩进
+
+可以用4个空格或者Tab键实现
+
+这里的缩进相对于c语言和Java中的{}
